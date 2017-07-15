@@ -1,0 +1,60 @@
+.v-transition {
+    -webkit-transition: all 0.15s ease-in;
+    -moz-transition: all 0.15s ease-in;
+    -o-transition: all 0.15s ease-in;
+    transition: all 0.15s ease-in;
+}
+
+.v-plugins-list {
+    counter-reset: plugins-counter;
+}
+
+.v-plugins-list__item {
+    counter-increment: plugins-counter;
+}
+
+.v-plugins-list__item::before {
+    display: inline-block;
+    width: 16px;
+    margin-right: 5px;
+    content: counter(plugins-counter);
+    text-align: right;
+}
+
+.v-plugins-list__item input[type='checkbox'] {
+    margin-top: 0;
+}
+
+.v-plugins-list__item input[type='checkbox']:checked + label {
+    opacity: 0.3;
+}
+
+.v-check-actions {
+    margin-top: 15px;
+}
+
+.v-check-actions .button:not(:last-of-type) {
+    margin-right: 10px;
+}
+
+.v-userlist {
+    display: inline-block;
+    min-width: 250px;
+    min-height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.v-loader {
+    display: none;
+    vertical-align: middle;
+}
+
+.v-loader > img {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.v-form.loading .v-loader {
+    display: inline-block;
+}
